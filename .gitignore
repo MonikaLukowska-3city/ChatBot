@@ -1,0 +1,4 @@
+rasa_engine/.rasa
+*.pyc
+*.log
+airflow\logs
