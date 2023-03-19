@@ -28,6 +28,7 @@ Wejdz na strone localhost i zacznij czat
 =====================
 Odpalanie całosci z docker:
 
+cd D:\chatbot\rasa_engine
 docker build -t rasa_engine .
 
 docker-compose up
