@@ -5,13 +5,24 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - satisfaction
+  - dissatisfaction
   - bot_challenge
+  - return
+  - reason_return
+  - reason_reclamation
+  - reclamation
+  - service_office
 
 entities:
   - time
   - entity_name
+  - product_type
+  - size
+  - mechanical_damage
+  - dirt
+  - no_items
+  - incomplete
 
  
 slots:
@@ -22,12 +33,24 @@ slots:
       entity: entity_name
 
 responses:
-  utter_greet:
-    - text: "Hey! How are you?"
+  utter_conversation_start:
+    - text: "Hi, I'm a claim bot and I want to help you solve your problems with your order. Please enter your order number so I can start the claim process."
+  
+  utter_service_start:
+    - buttons:
+      - title: Reclamation
+        payload: Reclamation
+      - title: Return
+        payload: Return
+      - title: "Contact the service desk"
+        payload: "Contact the service desk"
+    - text: "{customer_name}, please select the topic you are interested in from the list."
 
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_start_return:
+    - text: "Before starting the return process, I will ask you a few questions. After answering all my questions, our consultant will contact you in the next 1-2 business days."
+
+  utter_reclamation:
+    - text: "{customer_name}, your order is {product_name} {product_model}. Please describe what the problem was in the box below. Our experts will contact you in the next 1-2 business days after submitting the complaint to solve the problem."
 
   utter_did_that_help:
     - text: "Did that help you?"
@@ -37,12 +60,22 @@ responses:
 
   utter_goodbye:
     - text: "Bye"
+    image: "https://previews.123rf.com/images/bsd555/bsd5551808/bsd555180802024/107194150-winking-robot-emoji-color-icon-happy-and-funny-chatbot-smiley-chat-bot-emoticon-artificial.jpg"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot and I want to help you solve your problem."
+
+  utter_bot_not_help:
+    - text: "Unfortunately, I cannot respond to your complaint. Please contact our service office at 888 888 888."
+
+  utter_anything_else:
+    - text: "Can I help you with anything else?"
+
+  utter_service_office:
+    text: "If you need to contact our service office, please call 888 888 888."
 
 actions:
-  - action_hello_world
+  - action_conversation_start
 
 session_config:
   session_expiration_time: 60

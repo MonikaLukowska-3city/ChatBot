@@ -10,3 +10,14 @@ rules:
     steps:
       - intent: bot_challenge
       - action: utter_iamabot
+
+  - rule: Service office
+    steps:
+      - intenet: service_office
+      - action: utter_service_office
+
+  - rule: Activate return form
+    steps:
+      - intent: return
+      - action: return_form
+      - activation_loop: return_form

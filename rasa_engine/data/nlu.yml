@@ -49,39 +49,30 @@ nlu:
       - no way
       - not really
 
-  - intent: mood_great
+  - intent: satisfaction
     examples: |
       - perfect
       - great
       - amazing
-      - feeling like a king
       - wonderful
-      - I am feeling very good
       - I am great
       - I am amazing
-      - I am going to save the world
       - super stoked
       - extremely good
       - so so perfect
       - so good
       - so perfect
 
-  - intent: mood_unhappy
+  - intent: dissatisfaction
     examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
+      - that's not what I meant
       - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
+      - I am dissatisfied
+      - hopelessness
+      - badly
+      - the worst that could be
+      - poorly
+      - it doesn't suit me
 
   - intent: bot_challenge
     examples: |
@@ -89,3 +80,65 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
+
+  - intent: return
+    examples: |
+      - return
+      - I want to give back
+      - give back
+      - please refund
+      - please return
+
+  - intent: reason_return
+    examples: |
+      - I do not like
+      - I made up my mind
+      - I don't want this [blouse](product_type)
+      - I don't want this [shirt](product_type)
+      - I just want to return [pants](product_type)
+      - they are not pretty
+      - I am entitled to a refund
+      - [shoes](product_type) are too [big](size) for me
+      - [pants](product_type) are falling off me
+      - [top]((product_type)) is too [large](size) for the offer
+      - I do not fit in [size](size)
+      - I don't like the color of the [hoodie](product_type).
+      - the color of the [skirt](product_type) is different than in the offer
+
+  - intent: reason_reclamation
+    examples: |
+      - [blouse](product_type) seems [stretched](mechanical_damage)
+      - [dress](product_type) is too [big](size) for me
+      - [dress](product_type) is too [small](size)
+      - stains are clearly visible (dirt)
+      - [blouse](product_type) has [stains](dirt)
+      - [shirt](product_type) is [dirty](dirt)
+      - [pants](product_type) are too [wide](size)
+      - [torn](mechanical_damage) legs in [trousers](product_type)
+      - (missing)[no_items] button in [sweater](product_type)
+      - [shoe](product_type) heel is [broken](mechanical_damage)
+      - [blouse](product_type) is [torn](mechanical_damage)
+      - [sweater](product_type) is [damaged](mechanical_damage)
+      - [fallen](mechanical_damage) [jacket](product_type) zipper
+      - [missing](no_items) some buttons from [jacket](product_type)
+      - [none](no_items) patches on [trousers](product_type)
+
+  - intent: reclamation
+    examples: |
+      - I want to make a complaint
+      - product is not working
+      - product is [broken](mechanical_damage)
+      - reclamation
+      - order is [broken](mechanical_damage)
+      - I am filing a complaint
+      - product is damaged
+      - product is [incomplete](incomplete)
+      - items are missing from the order
+
+  - intent: service_office
+    examples: |
+      - please consultant
+      - please agent
+      - I want to talk to a consultant
+      - I want to talk to a agent
+
